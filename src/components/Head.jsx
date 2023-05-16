@@ -11,6 +11,8 @@ const Head = () => {
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
   };
+
+  const [searchIt, setSearchIt] = useState("");
   const [loggedIn, setLoggedIn] = useState(true);
   const [searching, setSearching] = useState("");
   const [putSearching, setPutSearching] = useState([]);
@@ -24,7 +26,7 @@ const Head = () => {
       } else {
         getSearch();
       }
-    }, 200);
+    }, 400);
     return () => {
       clearTimeout(timer);
     };
@@ -38,11 +40,11 @@ const Head = () => {
   };
 
   return (
-    <div className="grid grid-flow-col p-5 m-2 h-20 shadow-lg">
+    <div className="grid grid-flow-col px-5 py-6 h-20 shadow-lg sticky top-0 bg-gray-600">
       <div className="flex col-span-1">
         <img
           onClick={() => toggleMenuHandler()}
-          className="h-8 mx-2"
+          className="h-8 mx-2 bg-gray-400"
           alt="menu"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToUAsdwrOoNLj_v7woMosdnVLwH2UK7sdR6nSDsHk&s"
         ></img>
@@ -57,7 +59,7 @@ const Head = () => {
       <div className="col-span-10">
         <input
           onFocus={() => setShowSearch(true)}
-          onBlur={() => setShowSearch(false)}
+          onBlur={() => setShowSearch(true)}
           className="w-1/2 border border-gray-500 p-2 rounded-l-full"
           value={searching}
           onChange={(e) => {
@@ -65,7 +67,7 @@ const Head = () => {
           }}
           type="text"
         ></input>
-        <button className="border border-gray-700 p-2 rounded-r-full">
+        <button className="border border-gray-600 bg-gray-100 p-2 rounded-r-full font-bold">
           Search
         </button>
         {showSearch && (

@@ -19,7 +19,7 @@ const VideoContainer = () => {
   // if (videos == []) return null;
 
   return (
-    <div className="flex flex-wrap scroll-smooth">
+    <div className="flex flex-wrap scroll-smooth gap-4 mb-4 justify-center bg-gray-400">
       {videos.map((video) => (
         <Link to={"/watch?v=" + video.id} key={video.id}>
           <VideoCard key={video.id} info={video} />
