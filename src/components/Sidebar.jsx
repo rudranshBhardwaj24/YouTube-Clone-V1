@@ -4,7 +4,7 @@ const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   if (!isMenuOpen) return null;
   return (
-    <div className="p-5 m-2 shadow-lg w-48 sticky top-20 h-screen overflow-y-auto bg-gray-400">
+    <div className="sm:p-8 shadow-lg sm:w-48 sm:sticky top-20 sm:h-screen overflow-y-auto bg-gray-600 text-gray-100">
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -21,6 +21,27 @@ const Sidebar = () => {
         <li>Movies</li>
       </ul>
       <h1 className="font-bold pt-2">Watch Later</h1>
+      <ul>
+        <li>Music</li>
+        <li>Sports</li>
+        <li>Gaming</li>
+        <li>Movies</li>
+      </ul>
+      <h1 className="font-bold pt-5">Subscription</h1>
+      <ul>
+        <li>Music</li>
+        <li>Sports</li>
+        <li>Gaming</li>
+        <li>Movies</li>
+      </ul>
+      <h1 className="font-bold pt-5">Subscription</h1>
+      <ul>
+        <li>Music</li>
+        <li>Sports</li>
+        <li>Gaming</li>
+        <li>Movies</li>
+      </ul>
+      <h1 className="font-bold pt-5">Subscription</h1>
       <ul>
         <li>Music</li>
         <li>Sports</li>

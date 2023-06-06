@@ -13,7 +13,7 @@ const list = [
 
 const ButtonList = () => {
   return (
-    <div className="flex bg-gray-400">
+    <div className="sm:flex flex flex-wrap bg-gray-600 gap-6 p-2">
       {list.map((name, index) => (
         <Button name={name} key={index} />
       ))}

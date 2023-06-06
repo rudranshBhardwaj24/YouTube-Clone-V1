@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const Body = () => {
   const auth = (store) => store.login.auth;
   return (
-    <div className="grid grid-flow-col">
+    <div className="sm:grid sm:grid-flow-col flex flex-col w-screen">
       {!auth ? (
         <LoginPage />
       ) : (
@@ -18,8 +18,6 @@ const Body = () => {
           <Outlet />
         </>
       )}
-      {/* <Sidebar />
-      <Outlet /> */}
     </div>
   );
 };

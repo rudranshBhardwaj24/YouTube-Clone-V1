@@ -50,7 +50,7 @@ const Head = () => {
         ></img>
         <a href="/">
           <img
-            className="h-8"
+            className="h-8 w-[2.5rem]"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1024px-YouTube_full-color_icon_%282017%29.svg.png"
             alt="youtube-logo"
           ></img>
